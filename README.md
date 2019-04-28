@@ -47,43 +47,43 @@ java -jar target\picture-manager-0.0.1-SNAPSHOT.jar
 com.pantkiewicz.demo.picturemanager.config.StartupDataLoader
 ```
 
-作成したデータは下記の通りです(全てのテーブルに自動生成IDカラムもあります)。
+作成したデータは下記の通りです:
 
 
 ### USERS
 ```
-LOGIN | PASSWORD
-----------------
-patryk  qwerty123
-john    abc123
+  ID   |   LOGIN  | PASSWORD
+------------------------------
+   1    patryk      qwerty123
+   2    john        abc123
 ```
 ### EVENTS
 ```
-   DATE     |         NAME        | DESCRIPTION
-------------------------------------------------
-2019-04-28      Culture festival  
-2019-05-05      Children's day
+  ID   |   DATE     |         NAME        | DESCRIPTION
+--------------------------------------------------------
+  3      2019-04-28      Culture festival  
+  4      2019-05-05      Children's day
 ```
 
 ### PICTURES
 ```
-   EVENT_ID          |    NAME     |     FILE_PATH
--------------------------------------------------------
-[Culture festival]       PIC_001     /test/PIC_001.png
-[Culture festival]       PIC_002     /test/PIC_002.png
-[Culture festival]       PIC_003     /test/PIC_003.png
-[Children's day]         PIC_004     /test/PIC_004.png
-[Children's day]         PIC_005     /test/PIC_005.png
+  ID   |    EVENT_ID          |    NAME     |     FILE_PATH
+---------------------------------------------------------------
+   5     [Culture festival]       PIC_001     /test/PIC_001.png
+   6     [Culture festival]       PIC_002     /test/PIC_002.png
+   7     [Culture festival]       PIC_003     /test/PIC_003.png
+   8     [Children's day]         PIC_004     /test/PIC_004.png
+   9     [Children's day]         PIC_005     /test/PIC_005.png
 ```
 
 ### ORDERS
 ```
-   USER_ID  | ORDERNO  |     DATE    |          
---------------------------------------        
-[patryk]       OR01      2019-04-28  
-[john]         OR02      2019-04-30 
-[patryk]       OR03      2019-05-06
-[john]         OR04      2019-05-07
+  ID   |    USER_ID  | ORDERNO  |     DATE    |          
+-----------------------------------------------      
+  10       [patryk]      OR01      2019-04-28  
+  11       [john]        OR02      2019-04-30 
+  12       [patryk]      OR03      2019-05-06
+  13       [john]        OR04      2019-05-07
 ```
 
 ### ORDER_PICTURES
