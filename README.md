@@ -19,15 +19,36 @@
 * Lombok
   * Constructor, Getter, Setter, equals, hashcodeなどアノテーションを使って自動的に生成しますので、コードがもっと読みやすいになります
   
+## ローカルでの動かし方
+### 1. IDE
+
+**[必須要件]** InteliJでLombokというプラグインが必要です
+
+* InteliJにプロジェクトを開きます
+* Mavenのclean installを実行します
+* 下記のクラスをRUNします：com.pantkiewicz.demo.picturemanager.PictureManagerDemoApplication
+
+### 2. コマンドライン
+
+**[必須要件]** ローカルでJava 8とMavenがインストールされています
+* GitHubからプロジェクトのZIPアーカイブをダウンロードして、解凍します。
+* コマンドラインを開いて、解凍されたディレクトリをワーキングディレクトリにします
+* 下記のコマンドを実行します
+```
+mvn package
+mvn install
+java -jar target\picture-manager-0.0.1-SNAPSHOT.jar
+```
+
 ## テストデータ
 
-プロジェクトのスタートアップの時に予めロードします。
+プロジェクトのスタートアップの時に予めテストデータをロードします。
 ```
 com.pantkiewicz.demo.picturemanager.config.StartupDataLoader
 ```
 
-作成したデータ下記の通りです：
-(全てのテーブルに自動生成IDカラムもあります)
+作成したデータは下記の通りです(全てのテーブルに自動生成IDカラムもあります)。
+
 
 ### USERS
 ```
