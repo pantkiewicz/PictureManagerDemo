@@ -102,7 +102,7 @@ john    abc123
 
 ## API
 ### ユーザがログインするAPI
-> [POST] http://localhost:8080/user/login
+> [POST] http://localhost:8080/photomanager/user/login
 
 * パスワードがハッシュとしてデータベースに保存されています
 * loginIDは大文字小文字を区別しません
@@ -125,7 +125,7 @@ john    abc123
 ```
 
 ### 写真購入枚数の集計API
-> [POST] http://localhost:8080/order/searchOrderedPicturesForPeriod
+> [POST] http://localhost:8080/photomanager/order/searchOrderedPicturesForPeriod
 #### 引数の例
 ```
 {
